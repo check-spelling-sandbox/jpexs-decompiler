@@ -3319,7 +3319,7 @@ public final class MainPanel extends JPanel implements TreeSelectionListener, Se
                         } catch (Exception ex) {
                             logger.log(Level.SEVERE, "Error during renaming identifiers", ex);
                             Main.stopWork();
-                            ViewMessages.showMessageDialog(MainPanel.this, translate("error.occured").replace("%error%", ex.getClass().getSimpleName()));
+                            ViewMessages.showMessageDialog(MainPanel.this, translate("error.occurred").replace("%error%", ex.getClass().getSimpleName()));
                         }
                     });
                 }
@@ -4562,7 +4562,7 @@ public final class MainPanel extends JPanel implements TreeSelectionListener, Se
                             } catch (Exception ex) {
                                 logger.log(Level.SEVERE, "Error during renaming identifiers", ex);
                                 Main.stopWork();
-                                ViewMessages.showMessageDialog(MainPanel.this, translate("error.occured").replace("%error%", ex.getClass().getSimpleName()));
+                                ViewMessages.showMessageDialog(MainPanel.this, translate("error.occurred").replace("%error%", ex.getClass().getSimpleName()));
                             }
                         });
                     }
