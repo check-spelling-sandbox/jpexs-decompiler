@@ -1336,7 +1336,7 @@ public final class Configuration {
         } else {
             logLevel = Level.WARNING;
         }
-        //limit paralel threads?
+        //limit parallel threads?
         //int processorCount = Runtime.getRuntime().availableProcessors();
     }
 
