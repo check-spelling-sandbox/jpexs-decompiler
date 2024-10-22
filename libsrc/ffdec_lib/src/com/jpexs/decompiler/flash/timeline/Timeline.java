@@ -638,7 +638,7 @@ public class Timeline {
 
         createASPackages();
         if (timelined instanceof SWF) {
-            // popuplate only for main timeline
+            // populate only for main timeline
             populateSoundStreamBlocks(-1, timelined.getTags());
         }
 
