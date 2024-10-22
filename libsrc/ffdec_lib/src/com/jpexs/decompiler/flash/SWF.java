@@ -5253,7 +5253,7 @@ public final class SWF implements SWFContainerItem, Timelined, Openable {
 
     /**
      * Sorts character ids. Order of character ids will match the first
-     * occurence of the characters.
+     * occurrence of the characters.
      */
     public void sortCharacterIds() {
         int maxId = Math.max(tags.size(), getNextCharacterId());
