@@ -175,7 +175,7 @@ if [ "$DO_DEPLOY" == 1 ]; then
       echo "WARNING: File $FILE_PATH does not exist!"
     fi
     
-    curl --silent --request POST --data-binary @$FILE_PATH --header "Content-Type: $CONTENT_TYPE" --header "Accept: application/vnd.github.manifold-preview" --user $GITHUB_USER:$GITHUB_ACCESS_TOKEN https://uploads.github.com/repos/$GITHUB_REPO/releases/$RELEASE_ID/assets?name=$FILE_NAME>/dev/null
+    curl --show-error --no-progress-meter --verbose --request POST --data-binary @$FILE_PATH --header "Content-Type: $CONTENT_TYPE" --header "Accept: application/vnd.github.manifold-preview" --user $GITHUB_USER:$GITHUB_ACCESS_TOKEN https://uploads.github.com/repos/$GITHUB_REPO/releases/$RELEASE_ID/assets?name=$FILE_NAME
     CURL_STATUS=$?
     if [ "$CURL_STATUS" != 0 ]; then
         echo "UPLOAD FAILED on CURL Error ${CURL_STATUS}";
