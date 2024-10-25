@@ -87,9 +87,9 @@ else
       VERSION_RELEASE=`echo $VERSION_NUMBER|cut -d '.' -f 3`                    
       
       echo "">$VERSION_PROP_FILE
-      echo "major=$VERSION_MAJOR">>$VERSION_PROP_FILE
-      echo "minor=$VERSION_MINOR">>$VERSION_PROP_FILE
-      echo "release=$VERSION_RELEASE">>$VERSION_PROP_FILE
+      echo "major=${VERSION_MAJOR:-0}">>$VERSION_PROP_FILE
+      echo "minor=${VERSION_MINOR:-0}">>$VERSION_PROP_FILE
+      echo "release=${VERSION_RELEASE:-0}">>$VERSION_PROP_FILE
       echo "build=$NEXT_NIGHTLY_VER">>$VERSION_PROP_FILE
       echo "revision=$CICD_COMMIT">>$VERSION_PROP_FILE
       echo "debug=true">>$VERSION_PROP_FILE
