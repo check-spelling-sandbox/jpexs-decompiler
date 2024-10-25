@@ -30,6 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     container: debian:sid
 
+    permissions:
+      contents: write
+
     steps:
     - name: Checkout
       uses: actions/checkout@v3
